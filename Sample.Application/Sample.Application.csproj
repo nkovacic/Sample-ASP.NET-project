@@ -78,11 +78,23 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SampleApplicationModule.cs" />
+    <Compile Include="Services\Base\BaseService.cs" />
+    <Compile Include="Services\TextUploadService.cs" />
+    <Compile Include="ViewModels\TextUpload\TextUploadResultViewModel.cs" />
+    <Compile Include="ViewModels\TextUpload\TextUploadViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Sample.Core\Sample.Core.csproj">
+      <Project>{54562A5B-5623-470E-9B2F-2BE330F4210F}</Project>
+      <Name>Sample.Core</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
