@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Sample.Core.Web;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -8,14 +9,14 @@ using System.Web.Routing;
 
 namespace Sample.Web
 {
-    public class MvcApplication : System.Web.HttpApplication
+    public class MvcApplication : SampleWebApplication
     {
         protected void Application_Start()
         {
-            AreaRegistration.RegisterAllAreas();
+            base.Application_Start(SampleWebApplicationConfiguration.WebConfiguration());
+
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
             RouteConfig.RegisterRoutes(RouteTable.Routes);
-            BundleConfig.RegisterBundles(BundleTable.Bundles);
         }
     }
 }

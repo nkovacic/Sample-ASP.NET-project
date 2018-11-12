@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Sample.Core.Web;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -9,15 +10,14 @@ using System.Web.Routing;
 
 namespace Sample.WebApi
 {
-    public class WebApiApplication : System.Web.HttpApplication
+    public class WebApiApplication : SampleWebApplication
     {
         protected void Application_Start()
         {
-            AreaRegistration.RegisterAllAreas();
+            base.Application_Start(GlobalConfiguration.Configuration, SampleWebApplicationConfiguration.DefaultConfiguration());
+
             GlobalConfiguration.Configure(WebApiConfig.Register);
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
-            RouteConfig.RegisterRoutes(RouteTable.Routes);
-            BundleConfig.RegisterBundles(BundleTable.Bundles);
         }
     }
 }
