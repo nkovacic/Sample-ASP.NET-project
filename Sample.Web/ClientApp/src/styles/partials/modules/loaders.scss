@@ -1,0 +1,55 @@
+@mixin spinkit-fading-cirlce-loader($spinkit-spinner-color, $spinkit-size: 40px, $spinkit-spinner-margin: 40px auto) {
+    .sk-fading-circle {
+        $cubeCount: 4;
+        $animationDuration: 2.4s;
+        $delayRange: $animationDuration/2;
+        $circleCount: 12;
+        $animationDuration: 1.2s;
+
+        margin: $spinkit-spinner-margin;
+        width: $spinkit-size;
+        height: $spinkit-size;
+        position: relative;
+
+        .sk-circle {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+
+        .sk-circle:before {
+            content: '';
+            display: block;
+            margin: 0 auto;
+            width: 15%;
+            height: 15%;
+            background-color: $spinkit-spinner-color;
+            border-radius: 100%;
+            animation: sk-circleFadeDelay $animationDuration infinite ease-in-out both;
+        }
+
+        @for $i from 2 through $circleCount {
+            .sk-circle#{$i} {
+                transform: rotate(360deg / $circleCount * ($i - 1));
+            }
+        }
+
+        @for $i from 2 through $circleCount {
+            .sk-circle#{$i}:before {
+                animation-delay: - $animationDuration + $animationDuration / $circleCount * ($i - 1);
+            }
+        }
+    }
+}
+
+@keyframes sk-circleFadeDelay {
+    0%, 39%, 100% {
+        opacity: 0
+    }
+
+    40% {
+        opacity: 1
+    }
+}

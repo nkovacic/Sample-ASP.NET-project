@@ -1,0 +1,23 @@
+@import "~styles/partials/variables";
+
+.alert-container {
+    right: 20px;
+    position: fixed;
+    top: 150px;
+    z-index: 100;
+
+    .alert {
+        cursor: pointer;
+        width: 250px;
+
+        i {
+            font-size: 20px;
+
+        }
+
+        .close {
+            font-size: 2.5rem;
+            line-height: 15px;
+        }
+    }
+}

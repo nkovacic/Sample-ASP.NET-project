@@ -1,0 +1,96 @@
+h1,
+h2,
+h3,
+h4,
+h5 {
+    color: $log-cabin-black;
+    font-family: "Raleway", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: $regular;
+
+    &.white {
+        color: white;
+    }
+}
+
+
+h1 {
+
+}
+
+h2 {
+    &.headline {
+        font-size: 34px;
+        line-height: 40px;
+        margin: 0 0 30px 0;
+
+        span {
+            font-size: 23px;
+            line-height: 37px;
+        }
+    }
+}
+
+h3 {
+    &.headline {
+        font-size: 30px;
+        line-height: 37px;
+        margin: 0 0 30px 0;
+    }
+}
+
+h4 {
+    margin-bottom: 10px;
+    margin-top: 10px;
+
+    &.headline {
+        font-size: 22px;
+        line-height: 32px;
+        margin: -5px 0 30px;
+    }
+}
+
+h5 {
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+h6 {
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+.headline {
+    span {
+        font-size: 22px;
+        line-height: 36px;
+        margin-top: 10px;
+        color: $suva-grey;
+        font-weight: 300;
+        display: block;
+
+        i {
+            color: $pink;
+            font-style: normal;
+        }
+    }
+
+    &.centered {
+        text-align: center;
+    }
+}
+
+mark {
+    font-weight: 500;
+}
+
+a {
+    &.link {
+        color: $default-font-color;
+        cursor: pointer;
+    }
+
+    &.active,
+    &:hover {
+        color: $pink;
+    }
+}
