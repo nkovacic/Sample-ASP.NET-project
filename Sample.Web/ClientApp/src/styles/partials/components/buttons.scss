@@ -1,0 +1,146 @@
+@mixin button-bg($bg, $color: white) {
+    background-color: $bg;
+    border: 1px solid $bg;
+    color: $color;
+
+    &:hover {
+        background-color: darken($bg, 8%);
+        transition: background-color .3s ease;
+    }
+
+    &.active,
+    &:active {
+        background-color: darken($bg, 25%);
+    }
+
+    &.btn-hollow {
+        @include button-hollow-bg($bg)
+    }
+}
+
+@mixin button-hollow-bg($color, $active-color: white) {
+    background-color: white;
+    color: $color;
+
+    &.active,
+    &:hover {
+        background-color: $color;
+        border: 1px solid white;
+        color: $active-color;
+    }
+}
+
+.btn {
+    border: none;
+    border-radius: 15px;
+    color: white;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 15px;
+    font-weight: $bold;
+    overflow: hidden;
+    padding: 5px 16px;
+    position: relative;
+    transition: all 0.2s ease-in-out;
+
+    &:active,
+    &:focus {
+        box-shadow: none;
+    }
+
+    & + .btn {
+        margin-left: 6px;
+    }
+
+    &.btn-pink {
+        @include button-bg($pink);
+
+        &.btn-hollow {
+            @include button-hollow-bg($pink);
+        }
+    }
+
+    &.btn-grey {
+        @include button-bg($gallery-gray, $storm-dust-grey);
+    }
+
+    &.btn-atomic-tangerine {
+        @include button-bg($poi-atomic-tangerine);
+    }
+
+    &.btn-dodger-blue {
+        @include button-bg($poi-dodger-blue);
+    }
+
+    &.btn-wild-lemon {
+        @include button-bg($poi-wild-lemon);
+    }
+
+    &.btn-robin-egg-blue {
+        @include button-bg($poi-robin-egg-blue);
+    }
+
+    &.btn-dull-lavender {
+        @include button-bg($poi-dull-lavender);
+    }
+
+    &.btn-neptune {
+        @include button-bg($poi-neptune);
+    }
+
+    &.btn-jade {
+        @include button-bg($poi-jade);
+    }
+
+    &.btn-cerulean {
+        @include button-bg($poi-cerulean);
+    }
+
+    &.btn-mid-grey {
+        @include button-bg($poi-mid-grey);
+    }
+
+    &.btn-cornfield {
+        @include button-bg($poi-cornfield, black);
+    }
+
+    &.btn-mine-shaft {
+        @include button-bg($poi-mine-shaft);
+    }
+
+    &.btn-sm {
+        $button-height: 35px;
+
+        font-size: 13px;
+        font-weight: $regular;
+        padding-bottom: 4px;
+        padding-top: 4px;
+    }
+
+    &.btn-lg {
+        font-size: 18px;
+        font-weight: $bold;
+        height: 50px;
+        padding: 9px 20px;
+    }
+
+    & > i {
+        margin-right: 5px;
+    }
+}
+
+a {
+    &.btn {
+        &.btn-link {
+            line-height: 1.7;
+
+            &:hover  {
+                text-decoration: none;
+            }
+        }
+        /*
+        &.btn-lg {
+            line-height: 50px;
+        }*/
+    }
+}

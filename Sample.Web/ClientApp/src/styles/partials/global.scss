@@ -1,0 +1,34 @@
+body {
+    background-color: white;
+    color: $default-font-color;
+    font-family: $default-font-family;
+    text-transform: none;
+    font-size: 15px;
+    line-height: 27px;
+    padding-top: $header-height;
+
+    &.full-width {
+        [ng-sidebar-content] {
+            & > layout-footer {
+                footer {
+                    display: none;
+                }
+            }
+        }
+    }
+
+    &.grey-background {
+        background-color: $alabaster-grey;
+    }
+}
+
+app-root {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+
+    .main-wrapper {
+        flex: 1;
+        padding-bottom: 80px;
+    }
+}

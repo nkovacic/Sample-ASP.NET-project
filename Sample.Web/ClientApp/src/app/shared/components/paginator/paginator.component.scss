@@ -1,0 +1,26 @@
+@import "~styles/partials/variables";
+
+::ng-deep {
+    .page-item {
+        .page-link {
+            color: $default-font-color;
+            font-weight: $bold;
+
+            &:focus {
+                box-shadow: none;
+            }
+        }
+
+        &.active {
+            .page-link {
+                background-color: $pink;
+                border-color: $pink;
+                color: white;
+            }
+        }
+
+        &.disabled {
+            color: lighten($default-font-color, 20%);
+        }
+    }
+}

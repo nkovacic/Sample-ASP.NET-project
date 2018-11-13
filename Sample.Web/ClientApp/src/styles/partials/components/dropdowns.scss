@@ -1,0 +1,17 @@
+.dropdown-menu {
+    .dropdown-item {
+        &.active,
+        &:active,
+        &:hover {
+            background-color: $celeste-grey;
+            color: $mine-shaft-black;
+            cursor: pointer;
+        }
+
+        ngb-highlight {
+            span {
+                color: $pink;
+            }
+        }
+    }
+}

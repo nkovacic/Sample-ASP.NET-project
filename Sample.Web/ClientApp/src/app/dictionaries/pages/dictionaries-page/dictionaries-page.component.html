@@ -1,0 +1,34 @@
+<div class="home-page-wrapper">
+    <div class="page-section-wrapper">
+        <div class="container">
+            <input class="form-control mb-3" [(ngModel)]="searchQuery" (ngModelChange)="debounceNgModelChange.next($event)"
+                   placeholder="Najdi glede na key" />
+            <div class="relative">
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th scope="col">Key</th>
+                            <th scope="col">Value</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngIf="!dictionaries.length">
+                            <td colspan="2">
+                                Ni rezultatov
+                            </td>
+                        </tr>
+                        <tr *ngFor="let dictionary of dictionaries;">
+                            <td>
+                                {{dictionary.key}}
+                            </td>
+                            <td>
+                                {{dictionary.value}}
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <ajax-loader [showLoader]="showLoader"></ajax-loader>
+            </div>           
+        </div>
+    </div>
+</div>

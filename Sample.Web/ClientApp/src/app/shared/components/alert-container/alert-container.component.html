@@ -1,0 +1,17 @@
+<div class="alert-container">
+    <div class="alert alert-dismissible" *ngFor="let alert of alerts; trackBy: trackByAlert"
+         [ngClass]="getAlertCssClasses(alert)" (click)="removeAlert(alert)">
+        <div class="media">
+            <i class="mr-3" [ngClass]="getAlertIcon(alert)"></i>
+            <div class="media-body">
+                <h5 class="alert-heading mt-0" *ngIf="alert.title">
+                    {{alert.title}}
+                </h5>
+                {{alert.message}}
+            </div>
+        </div>
+        <button class="close" aria-label="Close" type="button" >
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+</div>

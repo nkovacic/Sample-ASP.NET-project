@@ -1,0 +1,74 @@
+.checkboxes {
+    .custom-control-label {
+        margin-bottom: 10px;
+    }
+}
+
+.custom-checkbox {
+    &.custom-checkbox-lg {
+        .custom-control-input {
+            &:checked {
+                & ~ .custom-control-label {
+                }
+            }
+        }
+
+        .custom-control-label {
+            &:after {
+                background-size: 12px 12px;
+                top: 0.3rem;
+                left: -1.4rem;
+            }
+
+            &:before {
+                height: 20px;
+                width: 20px;
+            }
+        }
+    }
+
+    .custom-control-input {
+        &:checked {
+            &:disabled {
+                & ~ .custom-control-label {
+                    &:before {
+                        background-color: lighten($pink, 20%);
+                        border-color: lighten($pink, 20%);
+                    }
+
+                    cursor: not-allowed;
+                    opacity: 0.8;
+                }
+            }
+
+            & ~ .custom-control-label {
+                &:before {
+                    background-color: $pink;
+                    border-color: $pink;
+                }
+            }
+        }
+
+        & ~ .custom-control-label {
+            &:before {
+                box-shadow: none;
+            }
+        }
+    }
+
+    .custom-control-label {
+        color: $default-font-color;
+        cursor: pointer;
+        padding-left: 5px;
+
+        &:before {
+            background: white;
+            border: 2px solid $alto-grey;
+            transition: all 0.25s;
+        }
+
+        &:focus {
+            outline: none;
+        }
+    }
+}
