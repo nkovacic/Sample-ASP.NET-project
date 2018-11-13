@@ -27,6 +27,7 @@
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
     <TypeScriptToolsVersion>3.0</TypeScriptToolsVersion>
+    <TypeScriptCompileBlocked>True</TypeScriptCompileBlocked>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -257,43 +258,43 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <TypeScriptCompile Include="ClientApp\e2e\app.e2e-spec.ts" />
-    <TypeScriptCompile Include="ClientApp\e2e\app.po.ts" />
-    <TypeScriptCompile Include="ClientApp\src\app\app.component.ts" />
-    <TypeScriptCompile Include="ClientApp\src\app\app.module.ts" />
-    <TypeScriptCompile Include="ClientApp\src\app\app.states.ts" />
-    <TypeScriptCompile Include="ClientApp\src\app\dictionaries\dictionaries.module.ts" />
-    <TypeScriptCompile Include="ClientApp\src\app\dictionaries\dictionaries.states.ts" />
-    <TypeScriptCompile Include="ClientApp\src\app\dictionaries\pages\dictionaries-page\dictionaries-page.component.ts" />
-    <TypeScriptCompile Include="ClientApp\src\app\home\home.module.ts" />
-    <TypeScriptCompile Include="ClientApp\src\app\home\home.states.ts" />
-    <TypeScriptCompile Include="ClientApp\src\app\home\models\home.model.ts" />
-    <TypeScriptCompile Include="ClientApp\src\app\home\pages\home-page\home-page.component.ts" />
-    <TypeScriptCompile Include="ClientApp\src\app\shared\components\ajax-loader\ajax-loader.component.ts" />
-    <TypeScriptCompile Include="ClientApp\src\app\shared\components\ajax-loader\ajax-loader.model.ts" />
-    <TypeScriptCompile Include="ClientApp\src\app\shared\components\file-dropzone\file-dropzone.component.ts" />
-    <TypeScriptCompile Include="ClientApp\src\app\shared\components\alert-container\alert-container.component.ts" />
-    <TypeScriptCompile Include="ClientApp\src\app\shared\components\base-component\base.component.ts" />
-    <TypeScriptCompile Include="ClientApp\src\app\shared\components\footer\footer.component.ts" />
-    <TypeScriptCompile Include="ClientApp\src\app\shared\components\header\header.component.ts" />
-    <TypeScriptCompile Include="ClientApp\src\app\shared\components\not-found-component\not-found.component.ts" />
-    <TypeScriptCompile Include="ClientApp\src\app\shared\components\paginator\paginator.component.ts" />
-    <TypeScriptCompile Include="ClientApp\src\app\shared\models\base.model.ts" />
-    <TypeScriptCompile Include="ClientApp\src\app\shared\modules\form\form.module.ts" />
-    <TypeScriptCompile Include="ClientApp\src\app\shared\modules\form\services\form.service.ts" />
-    <TypeScriptCompile Include="ClientApp\src\app\shared\serializers\date.serializer.ts" />
-    <TypeScriptCompile Include="ClientApp\src\app\shared\services\alert.service.ts" />
-    <TypeScriptCompile Include="ClientApp\src\app\shared\services\lama-data.service.ts" />
-    <TypeScriptCompile Include="ClientApp\src\app\shared\services\lama-module.service.ts" />
-    <TypeScriptCompile Include="ClientApp\src\app\shared\shared.module.ts" />
-    <TypeScriptCompile Include="ClientApp\src\app\shared\utilities\helpers.ts" />
-    <TypeScriptCompile Include="ClientApp\src\environments\environment.dev.ts" />
-    <TypeScriptCompile Include="ClientApp\src\environments\environment.prod.ts" />
-    <TypeScriptCompile Include="ClientApp\src\environments\environment.ts" />
-    <TypeScriptCompile Include="ClientApp\src\main.ts" />
-    <TypeScriptCompile Include="ClientApp\src\polyfills.ts" />
-    <TypeScriptCompile Include="ClientApp\src\test.ts" />
-    <TypeScriptCompile Include="ClientApp\src\typings.d.ts" />
+    <Content Include="ClientApp\e2e\app.e2e-spec.ts" />
+    <Content Include="ClientApp\e2e\app.po.ts" />
+    <Content Include="ClientApp\src\app\app.component.ts" />
+    <Content Include="ClientApp\src\app\app.module.ts" />
+    <Content Include="ClientApp\src\app\app.states.ts" />
+    <Content Include="ClientApp\src\app\dictionaries\dictionaries.module.ts" />
+    <Content Include="ClientApp\src\app\dictionaries\dictionaries.states.ts" />
+    <Content Include="ClientApp\src\app\dictionaries\pages\dictionaries-page\dictionaries-page.component.ts" />
+    <Content Include="ClientApp\src\app\home\home.module.ts" />
+    <Content Include="ClientApp\src\app\home\home.states.ts" />
+    <Content Include="ClientApp\src\app\home\models\home.model.ts" />
+    <Content Include="ClientApp\src\app\home\pages\home-page\home-page.component.ts" />
+    <Content Include="ClientApp\src\app\shared\components\ajax-loader\ajax-loader.component.ts" />
+    <Content Include="ClientApp\src\app\shared\components\ajax-loader\ajax-loader.model.ts" />
+    <Content Include="ClientApp\src\app\shared\components\file-dropzone\file-dropzone.component.ts" />
+    <Content Include="ClientApp\src\app\shared\components\alert-container\alert-container.component.ts" />
+    <Content Include="ClientApp\src\app\shared\components\base-component\base.component.ts" />
+    <Content Include="ClientApp\src\app\shared\components\footer\footer.component.ts" />
+    <Content Include="ClientApp\src\app\shared\components\header\header.component.ts" />
+    <Content Include="ClientApp\src\app\shared\components\not-found-component\not-found.component.ts" />
+    <Content Include="ClientApp\src\app\shared\components\paginator\paginator.component.ts" />
+    <Content Include="ClientApp\src\app\shared\models\base.model.ts" />
+    <Content Include="ClientApp\src\app\shared\modules\form\form.module.ts" />
+    <Content Include="ClientApp\src\app\shared\modules\form\services\form.service.ts" />
+    <Content Include="ClientApp\src\app\shared\serializers\date.serializer.ts" />
+    <Content Include="ClientApp\src\app\shared\services\alert.service.ts" />
+    <Content Include="ClientApp\src\app\shared\services\lama-data.service.ts" />
+    <Content Include="ClientApp\src\app\shared\services\lama-module.service.ts" />
+    <Content Include="ClientApp\src\app\shared\shared.module.ts" />
+    <Content Include="ClientApp\src\app\shared\utilities\helpers.ts" />
+    <Content Include="ClientApp\src\environments\environment.dev.ts" />
+    <Content Include="ClientApp\src\environments\environment.prod.ts" />
+    <Content Include="ClientApp\src\environments\environment.ts" />
+    <Content Include="ClientApp\src\main.ts" />
+    <Content Include="ClientApp\src\polyfills.ts" />
+    <Content Include="ClientApp\src\test.ts" />
+    <Content Include="ClientApp\src\typings.d.ts" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />
