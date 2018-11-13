@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { environment } from '@environment';
 //import { Headers, Http, Response, URLSearchParams } from '@angular/http';
-import { HttpClient, HttpHeaders, HttpResponse  } from '@angular/common/http';
+import { HttpClient, HttpHeaders, HttpResponse, HttpRequest  } from '@angular/common/http';
 import { Observable, pipe, throwError } from 'rxjs';
 import { catchError } from 'rxjs/operators';
 
@@ -104,6 +104,15 @@ class Repository implements IRepository {
     private formatErrors() {
 
     }
+    private getFileUploadHeaders() {
+        
+        const headersConfig = {
+            //'Content-Type': 'multipart/form-data',
+            'Accept': 'application/json'
+        };
+
+        return new HttpHeaders(headersConfig);
+    }
     private getHeaders() {
         const headersConfig = {
             'Content-Type': 'application/json; charset=UTF-8',
@@ -141,6 +150,24 @@ class Repository implements IRepository {
                 params: <any>options.parameters
             });
     }
+
+    public actionFile(options: IActionFileParameters) {
+        if (options.action) {
+            this.url(options.action);
+        }
+
+        const formData: FormData = new FormData();
+
+        formData.append(options.fileFormDataName as string, options.file as File);
+
+        return this.http
+            .request(options.method.toString(), this.getUrl(), {
+                body: formData,
+                headers: this.getFileUploadHeaders(),
+                params: <any>options.parameters
+            });
+    }
+
     public association(id: string, model: string): IRepository {
         throw new Error("Method not implemented.");
     }

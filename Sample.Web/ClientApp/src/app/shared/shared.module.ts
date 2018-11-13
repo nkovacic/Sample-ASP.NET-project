@@ -3,11 +3,13 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 
+import { ngfModule } from "angular-file"
 import { NgbPaginationModule } from '@ng-bootstrap/ng-bootstrap/pagination/pagination.module';
 import { UIRouterModule } from '@uirouter/angular';
 
 import { AjaxLoaderComponent } from './components/ajax-loader/ajax-loader.component';
 import { AlertContainerComponent } from './components/alert-container/alert-container.component';
+import { FileDropzoneComponent } from './components/file-dropzone/file-dropzone.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { HeaderComponent } from './components/header/header.component';
 import { NotFoundComponent } from './components/not-found-component/not-found.component';
@@ -26,6 +28,7 @@ import { LamaModuleService } from './services/lama-module.service';
         CommonModule,
         HttpClientModule,
         FormsModule,
+        ngfModule,
         NgbPaginationModule,
         UIRouterModule.forChild(),
         NkFormModule
@@ -33,6 +36,7 @@ import { LamaModuleService } from './services/lama-module.service';
     declarations: [
         AjaxLoaderComponent,
         AlertContainerComponent,
+        FileDropzoneComponent,
         FooterComponent,
         HeaderComponent,
         NotFoundComponent,
@@ -44,6 +48,7 @@ import { LamaModuleService } from './services/lama-module.service';
         NkFormModule,
         AjaxLoaderComponent,
         AlertContainerComponent,
+        FileDropzoneComponent,
         FooterComponent,
         HeaderComponent,
         NotFoundComponent,

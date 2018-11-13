@@ -1,5 +1,3 @@
-import { IMedia } from '@shared/modules/media/models/media.model';
-
 export enum SortDirection {
     ascending = 'asc',
     descending = 'desc'
@@ -17,12 +15,6 @@ export interface IKeyValue<T, E> {
     key: T;
     value: E;
 }
-
-export interface ISimpleShowViewModel extends ISimpleEntity {
-    displayImage?: IMedia;
-    summary?: string;
-}
-
 
 export interface ISimpleEntity {
     id: string;

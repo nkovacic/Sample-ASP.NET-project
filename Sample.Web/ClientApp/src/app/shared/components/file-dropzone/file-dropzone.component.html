@@ -1,0 +1,13 @@
+<div class="file-dropzone-container"
+        ngfDrop selectable="1" multiple="1"
+        accept="text/plain"
+        (filesChange)="onFilesChanged()"
+        [(files)]="files"
+        [(validDrag)]="validComboDrag"
+        [(invalidDrag)]="invalidComboDrag"
+        [ngClass]="{'drag-valid': validComboDrag, 'drag-invalid': invalidComboDrag}">
+        <h2>
+            Povleci in spusti datoteko
+            ali jo izberi.
+        </h2>
+</div>

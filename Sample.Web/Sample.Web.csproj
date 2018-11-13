@@ -180,14 +180,16 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="ClientApp\src\app\app.component.html" />
-    <Content Include="ClientApp\src\app\home\components\main-search\main-search.component.html" />
     <Content Include="ClientApp\src\app\home\pages\home-page\home-page.component.html" />
     <Content Include="ClientApp\src\app\shared\components\ajax-loader\ajax-loader.component.html" />
+    <Content Include="ClientApp\src\app\shared\components\file-dropzone\file-dropzone.component.html" />
     <Content Include="ClientApp\src\app\shared\components\alert-container\alert-container.component.html" />
     <Content Include="ClientApp\src\app\shared\components\footer\footer.component.html" />
     <Content Include="ClientApp\src\app\shared\components\header\header.component.html" />
     <Content Include="ClientApp\src\app\shared\components\not-found-component\not-found.component.html" />
     <Content Include="ClientApp\src\app\shared\components\paginator\paginator.component.html" />
+    <Content Include="ClientApp\src\assets\img\fs-logo-black.png" />
+    <Content Include="ClientApp\src\assets\img\fs-logo.png" />
     <Content Include="ClientApp\src\index.html" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
@@ -202,16 +204,10 @@
     <Content Include="Web.Release.config">
       <DependentUpon>Web.config</DependentUpon>
     </Content>
-    <Content Include="Views\Web.config" />
-    <Content Include="Views\_ViewStart.cshtml" />
-    <Content Include="Views\Shared\Error.cshtml" />
-    <Content Include="Views\Shared\_Layout.cshtml" />
-    <Content Include="Views\Home\About.cshtml" />
-    <Content Include="Views\Home\Contact.cshtml" />
-    <Content Include="Views\Home\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="ClientApp\src\app\home\components\" />
     <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
@@ -219,7 +215,6 @@
     <Content Include="package.json" />
     <Content Include="ClientApp\e2e\tsconfig.e2e.json" />
     <Content Include="ClientApp\src\app\app.component.scss" />
-    <Content Include="ClientApp\src\app\home\components\main-search\main-search.component.scss" />
     <Content Include="ClientApp\src\app\home\pages\home-page\home-page.component.scss" />
     <Content Include="ClientApp\src\app\shared\components\ajax-loader\ajax-loader.component.scss" />
     <Content Include="ClientApp\src\app\shared\components\alert-container\alert-container.component.scss" />
@@ -233,14 +228,9 @@
     <Content Include="ClientApp\src\styles\partials\all.scss" />
     <Content Include="ClientApp\src\styles\partials\components\all.scss" />
     <Content Include="ClientApp\src\styles\partials\components\buttons.scss" />
-    <Content Include="ClientApp\src\styles\partials\components\carousels.scss" />
     <Content Include="ClientApp\src\styles\partials\components\checkboxes.scss" />
     <Content Include="ClientApp\src\styles\partials\components\dropdowns.scss" />
     <Content Include="ClientApp\src\styles\partials\components\inputs.scss" />
-    <Content Include="ClientApp\src\styles\partials\components\range-sliders.scss" />
-    <Content Include="ClientApp\src\styles\partials\components\select.scss" />
-    <Content Include="ClientApp\src\styles\partials\components\tabset.scss" />
-    <Content Include="ClientApp\src\styles\partials\components\widgets.scss" />
     <Content Include="ClientApp\src\styles\partials\global.scss" />
     <Content Include="ClientApp\src\styles\partials\modules\all.scss" />
     <Content Include="ClientApp\src\styles\partials\modules\loaders.scss" />
@@ -251,16 +241,9 @@
     <Content Include="ClientApp\src\styles\partials\variables.scss" />
     <Content Include="ClientApp\src\styles\vendor\all.scss" />
     <Content Include="ClientApp\src\styles\vendor\bootstrap\all.scss" />
-    <Content Include="ClientApp\src\styles\vendor\iconsmind\all.scss" />
-    <Content Include="ClientApp\src\styles\vendor\iconsmind\icons.scss" />
-    <Content Include="ClientApp\src\styles\vendor\iconsmind\iconsmind.scss" />
-    <Content Include="ClientApp\src\styles\vendor\js-datepicker\all.scss" />
-    <Content Include="ClientApp\src\styles\vendor\placeholder-loading\all.scss" />
-    <Content Include="ClientApp\src\styles\vendor\simple-line-icons\all.scss" />
-    <Content Include="ClientApp\src\styles\vendor\simple-line-icons\simple-line-icons-config.scss" />
-    <Content Include="ClientApp\src\styles\vendor\snazzy-info-window\all.scss" />
     <Content Include="ClientApp\src\tsconfig.app.json" />
     <Content Include="ClientApp\src\tsconfig.spec.json" />
+    <Content Include="ClientApp\src\app\shared\components\file-dropzone\file-dropzone.component.scss" />
     <None Include="packages.config" />
     <Content Include="tsconfig.json" />
     <Content Include="tslint.json" />
@@ -277,14 +260,13 @@
     <TypeScriptCompile Include="ClientApp\src\app\app.component.ts" />
     <TypeScriptCompile Include="ClientApp\src\app\app.module.ts" />
     <TypeScriptCompile Include="ClientApp\src\app\app.states.ts" />
-    <TypeScriptCompile Include="ClientApp\src\app\home\components\main-search\main-search.component.ts" />
     <TypeScriptCompile Include="ClientApp\src\app\home\home.module.ts" />
     <TypeScriptCompile Include="ClientApp\src\app\home\home.states.ts" />
     <TypeScriptCompile Include="ClientApp\src\app\home\models\home.model.ts" />
     <TypeScriptCompile Include="ClientApp\src\app\home\pages\home-page\home-page.component.ts" />
-    <TypeScriptCompile Include="ClientApp\src\app\home\services\home.service.ts" />
     <TypeScriptCompile Include="ClientApp\src\app\shared\components\ajax-loader\ajax-loader.component.ts" />
     <TypeScriptCompile Include="ClientApp\src\app\shared\components\ajax-loader\ajax-loader.model.ts" />
+    <TypeScriptCompile Include="ClientApp\src\app\shared\components\file-dropzone\file-dropzone.component.ts" />
     <TypeScriptCompile Include="ClientApp\src\app\shared\components\alert-container\alert-container.component.ts" />
     <TypeScriptCompile Include="ClientApp\src\app\shared\components\base-component\base.component.ts" />
     <TypeScriptCompile Include="ClientApp\src\app\shared\components\footer\footer.component.ts" />

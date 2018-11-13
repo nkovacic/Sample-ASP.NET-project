@@ -11,7 +11,7 @@
                 "build": {
                     "builder": "@angular-devkit/build-angular:browser",
                     "options": {
-                        "deployUrl": "/dist/",
+                        "deployUrl": "/wwwroot/dist/",
                         "outputPath": "wwwroot/dist",
                         "index": "ClientApp/src/index.html",
                         "main": "ClientApp/src/main.ts",

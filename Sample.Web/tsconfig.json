@@ -1,7 +1,7 @@
 {
     "compileOnSave": false,
     "compilerOptions": {
-        "outDir": "./wwwroot/dist/out-tsc",
+        "outDir": "./wwwroot/dist/",
         "sourceMap": true,
         "declaration": false,
         "moduleResolution": "node",

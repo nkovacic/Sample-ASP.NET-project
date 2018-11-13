@@ -78,6 +78,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Migrations\201811130731272_Initial.cs" />
+    <Compile Include="Migrations\201811130731272_Initial.Designer.cs">
+      <DependentUpon>201811130731272_Initial.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Dictionary.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -97,6 +101,11 @@
       <Project>{54562A5B-5623-470E-9B2F-2BE330F4210F}</Project>
       <Name>Sample.Core</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201811130731272_Initial.resx">
+      <DependentUpon>201811130731272_Initial.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

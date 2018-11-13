@@ -21,6 +21,7 @@ namespace Sample.WebApi.Controllers
             await UnitOfWork
                 .RepositoryAsync<Dictionary>()
                 .Query()
+                .OrderBy(q => q.OrderByDescending(dict => dict.Key))
                 .SelectPageAsync(1, 10);
 
             return Ok();

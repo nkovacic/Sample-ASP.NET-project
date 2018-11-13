@@ -1,7 +1,40 @@
 <div class="home-page-wrapper">
     <div class="page-section-wrapper">
         <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <file-dropzone (filesChanged)="onFilesChange($event)"></file-dropzone>
+                </div>
+                <div class="col-md-6">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th scope="col">#</th>
+                                <th scope="col">Vrstica</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr *ngIf="!results.length">
+                                <td colspan="2">
+                                    Ni rezultatov
+                                </td>
+                            </tr>
+                            <tr *ngFor="let line of results; index as i">
+                                <th>
+                                    {{results.length - i}}
+                                </th>
+                                <td>
+                                    {{line}}
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
             
+            <button class="btn btn-primary" (click)="uploadFile()">
+                Zamenjaj vrstni red datoteke
+            </button>
         </div>
     </div>
     <ajax-loader [showLoader]="showLoader"></ajax-loader>

@@ -13,14 +13,7 @@ export class LamaModuleService {
 
     constructor(private Helpers: Helpers) {
         this.modelMap = {
-            'category': 'categories',
-            'contact': 'contact',
-            'company': 'companies',
-            'listing': 'listings',
-            'page': 'pages',
-            'poi': 'poi',
-            'region': 'regions',
-            'statistic': 'statistics'
+            'textUpload': 'text-uploads'
         };
     }
 

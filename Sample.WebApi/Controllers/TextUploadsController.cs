@@ -19,7 +19,7 @@ namespace Sample.WebApi.Controllers
 
         [Route("")]
         [HttpPost, ValidateModel]
-        public async Task<IHttpActionResult> GetKeys(TextUploadViewModel uploadViewModel)
+        public async Task<IHttpActionResult> ReverseLines(TextUploadViewModel uploadViewModel)
         {
             var serviceResult = await ServiceForTextUploads.ReverseLinesFromUpload(uploadViewModel);
 

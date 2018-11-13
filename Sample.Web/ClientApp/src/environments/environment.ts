@@ -5,12 +5,7 @@
 
 export const environment = {
     apiPrefix: 'api',
-    apiRoot: 'http://localhost:53215',
+    apiRoot: 'http://localhost:49457',
     envName: 'local',
-    google: {
-        apiKey: 'AIzaSyAd-oVR3A_7V9eCO5G1rfzCyUE70DmK9bU'
-    },
-    production: false,
-    storageContainer: 'pictures',
-    storageName: 'realestatelocal'
+    production: false
 };
