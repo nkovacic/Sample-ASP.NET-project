@@ -18,6 +18,10 @@ export class FileDropzoneComponent implements OnInit {
     }
 
     public onFilesChanged() {
+        if (this.files.length > 1) {
+            this.files.splice(0, this.files.length - 1);
+        }
+        
         this.filesChanged.emit(this.files);
     }
 

@@ -180,6 +180,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="ClientApp\src\app\app.component.html" />
+    <Content Include="ClientApp\src\app\dictionaries\pages\dictionaries-page\dictionaries-page.component.html" />
     <Content Include="ClientApp\src\app\home\pages\home-page\home-page.component.html" />
     <Content Include="ClientApp\src\app\shared\components\ajax-loader\ajax-loader.component.html" />
     <Content Include="ClientApp\src\app\shared\components\file-dropzone\file-dropzone.component.html" />
@@ -244,6 +245,7 @@
     <Content Include="ClientApp\src\tsconfig.app.json" />
     <Content Include="ClientApp\src\tsconfig.spec.json" />
     <Content Include="ClientApp\src\app\shared\components\file-dropzone\file-dropzone.component.scss" />
+    <Content Include="ClientApp\src\app\dictionaries\pages\dictionaries-page\dictionaries-page.component.scss" />
     <None Include="packages.config" />
     <Content Include="tsconfig.json" />
     <Content Include="tslint.json" />
@@ -260,6 +262,9 @@
     <TypeScriptCompile Include="ClientApp\src\app\app.component.ts" />
     <TypeScriptCompile Include="ClientApp\src\app\app.module.ts" />
     <TypeScriptCompile Include="ClientApp\src\app\app.states.ts" />
+    <TypeScriptCompile Include="ClientApp\src\app\dictionaries\dictionaries.module.ts" />
+    <TypeScriptCompile Include="ClientApp\src\app\dictionaries\dictionaries.states.ts" />
+    <TypeScriptCompile Include="ClientApp\src\app\dictionaries\pages\dictionaries-page\dictionaries-page.component.ts" />
     <TypeScriptCompile Include="ClientApp\src\app\home\home.module.ts" />
     <TypeScriptCompile Include="ClientApp\src\app\home\home.states.ts" />
     <TypeScriptCompile Include="ClientApp\src\app\home\models\home.model.ts" />

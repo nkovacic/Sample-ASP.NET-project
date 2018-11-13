@@ -4,6 +4,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { UIRouterModule, UIRouter, UIView } from '@uirouter/angular';
 
+import { DictionariesModule } from './dictionaries/dictionaries.module';
 import { HomeModule } from './home/home.module';
 import { SharedModule } from './shared/shared.module';
 
@@ -23,7 +24,8 @@ import { APP_STATES } from './app.states';
             otherwise: { state: 'home' }*/
         }),
         SharedModule,
-        HomeModule,
+        DictionariesModule,
+        HomeModule
     ],
     providers: [
     ],

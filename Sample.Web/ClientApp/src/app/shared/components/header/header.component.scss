@@ -204,13 +204,12 @@ header {
                     margin: 0 5px;
 
                     a {
-                        color: #444;
+                        color: white;
                         cursor: pointer;
 
                         &:hover,
                         &.current {
                             background-color: transparent;
-                            color: white;
                             font-weight: $bold;
 
                             &:after {

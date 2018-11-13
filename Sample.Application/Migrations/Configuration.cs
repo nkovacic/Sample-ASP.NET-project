@@ -23,9 +23,25 @@ namespace Sample.Application.Migrations
             {
                 new Dictionary
                 {
-
+                    Key = "FirstKey",
+                    Value = "FirstValue",
+                    ObjectState = ObjectState.Added
+                },
+                new Dictionary
+                {
+                    Key = "SecondKey",
+                    Value = "SecondValue",
+                    ObjectState = ObjectState.Added
+                },
+                new Dictionary
+                {
+                    Key = "ThirdKey",
+                    Value = "ThirdValue",
+                    ObjectState = ObjectState.Added
                 }
             };
+
+            InsertOrUpdateEntities(q => q.Key, dictionaries, context);
         }
 
 

@@ -1,4 +1,5 @@
 ﻿using Sample.Application.Models;
+using Sample.Application.ViewModels;
 using Sample.Core.Api;
 using Sample.Core.Services;
 using Sample.Core.ViewModels;
@@ -32,9 +33,9 @@ namespace Sample.Application.Services
             return serviceResult;
         }
 
-        public async Task<ServiceResult<string>> GetDictionaryValue(string key)
+        public async Task<ServiceResult<DictionaryValueViewModel>> GetDictionaryValue(string key)
         {
-            var serviceResult = new ServiceResult<string>();
+            var serviceResult = new ServiceResult<DictionaryValueViewModel>();
 
             var foundDictionaryItem = await UnitOfWork
                 .RepositoryAsync<Dictionary>()
@@ -46,7 +47,10 @@ namespace Sample.Application.Services
                 return serviceResult.SetStatus(HttpStatusCode.NotFound);
             }
 
-            serviceResult.Data = foundDictionaryItem.Value;
+            serviceResult.Data = new DictionaryValueViewModel
+            {
+                Value = foundDictionaryItem.Value
+            };
 
             return serviceResult;
         }

@@ -89,6 +89,7 @@
     <Compile Include="Services\Base\BaseService.cs" />
     <Compile Include="Services\DictionariesService.cs" />
     <Compile Include="Services\TextUploadService.cs" />
+    <Compile Include="ViewModels\Dictionaries\DictionaryValueViewModel.cs" />
     <Compile Include="ViewModels\TextUpload\TextUploadResultViewModel.cs" />
     <Compile Include="ViewModels\TextUpload\TextUploadViewModel.cs" />
   </ItemGroup>

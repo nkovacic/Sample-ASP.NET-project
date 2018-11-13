@@ -13,6 +13,7 @@ export class LamaModuleService {
 
     constructor(private Helpers: Helpers) {
         this.modelMap = {
+            'dictionary': 'dictionaries',
             'textUpload': 'text-uploads'
         };
     }
