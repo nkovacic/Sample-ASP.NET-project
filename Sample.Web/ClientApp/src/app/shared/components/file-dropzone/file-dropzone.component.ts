@@ -9,6 +9,8 @@ import { Helpers } from '@shared/utilities/helpers';
 export class FileDropzoneComponent implements OnInit {
     @Output() filesChanged: EventEmitter<Array<File>> = new EventEmitter<Array<File>>();
 
+    public validComboDrag: boolean;
+    public invalidComboDrag: boolean;
     public files: Array<File> = [];
 
     constructor(private Helpers: Helpers) { }
