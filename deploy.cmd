@@ -109,8 +109,8 @@ goto :EOF
 echo Handling .NET Web Application deployment.
 
 :: 1. Restore NuGet packages
-IF /I "SellAround.sln" NEQ "" (
-  call :ExecuteCmd nuget restore "%DEPLOYMENT_SOURCE%\SellAround.sln"
+IF /I "Sample.sln" NEQ "" (
+  call :ExecuteCmd nuget restore "%DEPLOYMENT_SOURCE%\Sample.sln"
   IF !ERRORLEVEL! NEQ 0 goto error
 )
 
@@ -150,39 +150,13 @@ IF EXIST "%DEPLOYMENT_TARGET%\package.json" (
   echo Npm packages installed
   IF !ERRORLEVEL! NEQ 0 goto error
   popd
-  
-  :: 2. Install bower packages  
-  IF EXIST "%DEPLOYMENT_TARGET%\bower.json" (
-    echo Found bower.json. Installing bower packages.  
-
-    pushd "%DEPLOYMENT_TARGET%"
-    call :ExecuteCmd .\node_modules\.bin\bower install
-    echo Bower packages installed
-    IF !ERRORLEVEL! NEQ 0 goto error
-    popd
-  )
-
-  IF EXIST "%DEPLOYMENT_TARGET%\typings.json" (
-    echo Found typings.json. Installing TypeScript definitions.  
-
-    pushd "%DEPLOYMENT_TARGET%"
-    call :ExecuteCmd .\node_modules\.bin\typings prune
-    call :ExecuteCmd .\node_modules\.bin\typings install
-    echo TypeScript definitions installed
-    IF !ERRORLEVEL! NEQ 0 goto error
-    popd
-  )
     
-  :: 3. Run gulp  
-  IF EXIST "%DEPLOYMENT_TARGET%\gulpfile.js" (
-    echo Found gulpfile.js. Running gulp tasks.
-
-    pushd "%DEPLOYMENT_TARGET%"
-    call :ExecuteCmd .\node_modules\.bin\gulp prod
-    echo Gulp tasks finished.  
-    IF !ERRORLEVEL! NEQ 0 goto error
-    popd
-  )
+  :: 1. Run npm build  
+  pushd "%DEPLOYMENT_TARGET%"
+	  call :ExecuteCmd !NPM_CMD! run build-dev
+	  echo ClientSide scripts built
+	  IF !ERRORLEVEL! NEQ 0 goto error
+  popd
 )
 
 :: Post deployment stub
