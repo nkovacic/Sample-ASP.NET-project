@@ -108,6 +108,7 @@
   <ItemGroup>
     <Compile Include="Api\Controllers\BaseApiController.cs" />
     <Compile Include="Api\Controllers\BaseServiceController.cs" />
+    <Compile Include="Api\Parameters\ApiParameters.cs" />
     <Compile Include="Data\Database\DataContext\DatabaseConfiguration.cs" />
     <Compile Include="Data\Database\DataContext\DataContext.cs" />
     <Compile Include="Data\Database\DataContext\IDataContext.cs" />
@@ -160,6 +161,9 @@
     <Compile Include="Validation\Attributes\RequiredIfOneOfAttribute.cs" />
     <Compile Include="Validation\Attributes\RequiredOneOfAttribute.cs" />
     <Compile Include="Validation\Attributes\ValidateModel.cs" />
+    <Compile Include="ViewModels\BaseViewModel.cs" />
+    <Compile Include="ViewModels\Pagination\PaginationStateViewModel.cs" />
+    <Compile Include="ViewModels\Pagination\PaginationViewModel.cs" />
     <Compile Include="Web\Controllers\BaseWebController.cs" />
     <Compile Include="Web\Formatters\MultipartFormFormatter.cs" />
     <Compile Include="Web\SampleWebApplication.cs" />

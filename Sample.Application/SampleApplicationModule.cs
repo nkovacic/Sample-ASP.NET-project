@@ -24,7 +24,7 @@ namespace Sample.Application
 
         public void PostInitialize(ILifetimeScope container)
         {
-            //Database.SetInitializer(new MigrateDatabaseToLatestVersion<DataContext, Sample.Application.Migrations.Configuration>(true));
+            Database.SetInitializer(new MigrateDatabaseToLatestVersion<DataContext, Sample.Application.Migrations.Configuration>(true));
         }
     }
 }

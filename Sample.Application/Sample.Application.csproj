@@ -79,9 +79,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Models\Dictionary.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SampleApplicationModule.cs" />
     <Compile Include="Services\Base\BaseService.cs" />
+    <Compile Include="Services\DictionariesService.cs" />
     <Compile Include="Services\TextUploadService.cs" />
     <Compile Include="ViewModels\TextUpload\TextUploadResultViewModel.cs" />
     <Compile Include="ViewModels\TextUpload\TextUploadViewModel.cs" />

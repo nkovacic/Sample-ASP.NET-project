@@ -4,6 +4,7 @@ using System.Linq;
 using System.Linq.Expressions;
 using System.Threading.Tasks;
 using Sample.Core.Data.Database.Entities;
+using Sample.Core.ViewModels;
 
 namespace Sample.Core.Data.Database
 {
@@ -16,6 +17,7 @@ namespace Sample.Core.Data.Database
         IQueryFluent<TEntity> Include(Expression<Func<TEntity, object>> expression);
         IQueryFluent<TEntity> Include(string dotNotationExpression);
         Task<IEnumerable<TEntity>> SelectPageAsync(int page, int pageSize);
+        Task<PaginationViewModel<TEntity>> SelectPageAsync(int page, int pageSize, bool includeTotalCount);
         IQueryable<TEntity> SelectPage(int page, int pageSize);
         IQueryable<TEntity> SelectPage(int page, int pageSize, out int totalCount);
         IQueryable<TResult> Select<TResult>(Expression<Func<TEntity, TResult>> selector = null);

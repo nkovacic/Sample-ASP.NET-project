@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Sample.Application.Services.Base
+namespace Sample.Application.Services
 {
     public class BaseService
     {

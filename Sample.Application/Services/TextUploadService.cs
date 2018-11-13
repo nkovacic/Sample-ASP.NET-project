@@ -1,5 +1,4 @@
-﻿using Sample.Application.Services.Base;
-using Sample.Application.ViewModels;
+﻿using Sample.Application.ViewModels;
 using Sample.Core.Services;
 using System;
 using System.Collections.Generic;

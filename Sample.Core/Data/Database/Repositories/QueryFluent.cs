@@ -5,6 +5,7 @@ using System.Linq;
 using System.Linq.Expressions;
 using System.Threading.Tasks;
 using Sample.Core.Data.Database.Entities;
+using Sample.Core.ViewModels;
 
 namespace Sample.Core.Data.Database
 {
@@ -68,6 +69,27 @@ namespace Sample.Core.Data.Database
         public async Task<IEnumerable<TEntity>> SelectPageAsync(int page, int pageSize)
         {
             return await _repository.SelectAsync(_expression, _orderBy, _includes, _includesDotNotation, page, pageSize);
+        }
+
+        public async Task<PaginationViewModel<TEntity>> SelectPageAsync(int page, int pageSize, bool includeTotalCount)
+        {
+            var paginationViewModel = new PaginationViewModel<TEntity>();
+
+            paginationViewModel.SetPaginationState(-1, page, pageSize);
+
+            if (includeTotalCount)
+            {
+                paginationViewModel.Pagination.Count = await _repository.Select(_expression).CountAsync();
+            }
+
+            if (paginationViewModel.Pagination.Count > 0)
+            {
+                var entities = await _repository.SelectAsync(_expression, _orderBy, _includes, _includesDotNotation, page, pageSize);
+
+                paginationViewModel.AddItems(entities);
+            }
+
+            return paginationViewModel;
         }
 
         public IQueryable<TEntity> SelectPage(int page, int pageSize)
