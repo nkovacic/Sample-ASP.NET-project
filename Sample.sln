@@ -1,6 +1,6 @@
-﻿
+
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
+###############################sqash
 VisualStudioVersion = 15.0.28010.2026
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sample.Web", "Sample.Web\Sample.Web.csproj", "{074B0561-45B6-4191-B4C2-4E5F59E26369}"
