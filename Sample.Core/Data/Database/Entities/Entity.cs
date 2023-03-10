@@ -1,4 +1,5 @@
-﻿using System;
+using System;
+###sqash-commit-3
 using System.ComponentModel.DataAnnotations.Schema;
 using System.ComponentModel.DataAnnotations;
 using Newtonsoft.Json;
