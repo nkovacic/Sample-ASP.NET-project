@@ -1,4 +1,5 @@
 using System;
+### commit-sqash-3
 using System.Collections.Generic;
 using System.Data.Entity;
 using System.Data.Entity.ModelConfiguration;
